@@ -4,7 +4,7 @@
   "description": "A promise implementation I made as an exercise",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/johnwquarles/fancy-promise#readme",
   "dependencies": {
+    "jest": "^21.2.1",
     "mirrarray": "^2.0.0"
   }
 }

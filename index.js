@@ -42,7 +42,8 @@ class FancyPromise {
       returnValue._errorHandler = this._reject;
     } else {
       // resolve synchronously since the callback didn't evaluate to a (fancy) promise.
-      this._resolve && this._resolve(returnValue);
+      // Need to make sure we wait until .thens & .catch has been attached, though.
+      setTimeout(() => this._resolve && this._resolve(returnValue), 0);
     }
   }
   then(callback) {
@@ -71,4 +72,4 @@ class FancyPromise {
   }
 }
 
-export default FancyPromise;
+module.exports = FancyPromise;
