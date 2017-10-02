@@ -1,0 +1,25 @@
+{
+  "name": "fancy-promise",
+  "version": "1.0.0",
+  "description": "A promise implementation I made as an exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnwquarles/fancy-promise.git"
+  },
+  "keywords": [
+    "promise"
+  ],
+  "author": "John W Quarles <john.w.quarles@gmail.com> (quarl.es)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnwquarles/fancy-promise/issues"
+  },
+  "homepage": "https://github.com/johnwquarles/fancy-promise#readme",
+  "dependencies": {
+    "mirrarray": "^2.0.0"
+  }
+}
