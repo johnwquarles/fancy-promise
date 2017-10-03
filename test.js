@@ -52,17 +52,17 @@ test('It propagates an error to the .catch handler', async () => {
 test('It propagates an error to the .catch handler even with asynchronous fancypromises in between', async () => {
   const result = await new Promise(done => {
     new FancyPromise((resolve, reject) => {
-      setTimeout(() => reject(rejectedResult), 3000);
+      setTimeout(() => reject(rejectedResult), 200);
     })
     .then(result => `${result}isEqual`)
     .then(result => `${result}toThis`)
     .then(result => new FancyPromise(resolve => {
-      setTimeout(() => resolve(`${result}toThis`), 3000);
+      setTimeout(() => resolve(`${result}toThis`), 200);
     }))
     .then(result => `${result}isEqual`)
     .then(result => `${result}isEqual`)
     .then(result => new FancyPromise(resolve => {
-      setTimeout(() => resolve(`${result}toThis`), 3000);
+      setTimeout(() => resolve(`${result}toThis`), 200);
     }))
     .catch(result => done(result));
   });
